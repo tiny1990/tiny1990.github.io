@@ -1,0 +1,106 @@
+# ---------------- #
+#   Main Configs   #
+# ---------------- #
+baseurl:
+url: https://tiny1990.github.io
+date_format: "ordinal"
+title: 小潘
+subtitle: "技术改变生活"
+description: "小潘"
+keywords: 小pan,maoxiang,panmaoxiang
+timezone: Asia/Shanghai
+encoding: "utf-8"
+side_bar_repo_limit: 5
+
+# ---------------- #
+#      Author      #
+# ---------------- #
+author: Maoxiang Pan
+organization: tiny1990.github.io
+organization_url: http://tiny1990.github.io
+github_username: tiny1990
+location: Beijing, China
+email: gomax.pan@gmail.com
+
+# ---------------- #
+#    Navigation    #
+# ---------------- #
+navs:
+  -
+    href: /
+    label: 首页
+  -
+    href: /about/
+    label: 关于
+
+# ---------------- #
+#       RSS        #
+# ---------------- #
+subscribe_rss: /feed.xml
+
+# ---------------- #
+#      Jekyll      #
+# ---------------- #
+markdown: kramdown
+kramdown:
+    input: GFM
+highlighter: rouge
+paginate: 10
+lsi: false
+quiet: false
+excerpt_separator: "\n\n"
+permalink: /:year/:month/:day/:title/
+gems:
+    - jekyll-github-metadata
+    - rouge
+    - jekyll-paginate
+    - jekyll-sitemap
+    - jekyll-feed
+    - jemoji
+collections:
+    wiki:
+        output: true
+        permalink: /wiki/:path/
+
+repository: tiny1990/tiny1990.github.io
+
+# ---------------- #
+#      Comments    #
+# ---------------- #
+# support provider: disqus, gitment, gitalk
+comments_provider: disqus
+# !!!重要!!! 请修改下面这些信息为你自己申请的
+# !!!Important!!! Please modify infos below to yours
+# https://disqus.com
+disqus:
+    username: shi-xiao-pan-a
+# https://imsun.net/posts/gitment-introduction/
+gitment:
+    owner: tiny1990
+    repo: blog-comments
+    oauth:
+        client_id: xxxxxxxxxx
+        client_secret: xxxxxxxxxx
+# https://github.com/gitalk/gitalk#install
+gitalk:
+    owner: tiny1990
+    repo: blog-comments
+    clientID: xxxxxxxxxx
+    clientSecret: xxxxxxxxxx
+# 在使用其它评论组件时可点击显示 Disqus
+lazy_load_disqus : false
+
+# ---------------- #
+#      Search      #
+# ---------------- #
+simple_jekyll_search:
+    # 是否支持全文搜索
+    fulltext: false
+    # 最多显示多少条搜索结果
+    limit: 10
+
+# ---------------- #
+#    Analytics     #
+# ---------------- #
+google:
+    analytics_id: UA-126448162-1
