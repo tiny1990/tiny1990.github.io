@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: https://tiny1990.github.io
+url: http://binpan.me
 date_format: "ordinal"
 title: 小潘
 subtitle: "技术改变生活"
@@ -17,7 +17,7 @@ side_bar_repo_limit: 5
 # ---------------- #
 author: Maoxiang Pan
 organization: tiny1990.github.io
-organization_url: http://tiny1990.github.io
+organization_url: http://binpan.me
 github_username: tiny1990
 location: Beijing, China
 email: gomax.pan@gmail.com
