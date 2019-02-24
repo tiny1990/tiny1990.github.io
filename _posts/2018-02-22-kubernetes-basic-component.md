@@ -7,7 +7,7 @@ keywords:
 ---
 kubernetes 整体架构图
 
-<object data="images/k8s-cluseter.svg" type="image/svg+xml"></object>
+<object data="/images/k8s-cluseter.svg" type="image/svg+xml"></object>
 
 # Master Components
 
