@@ -5,6 +5,11 @@ categories: k8s
 description: kubernetes包含几个组件。各个组件的功能是什么。组件之间是如何交互的。
 keywords:
 ---
+kubernetes 整体架构图
+
+
+{% include ../images/k8s-cluseter.svg %}
+
 
 # Master Components
 
