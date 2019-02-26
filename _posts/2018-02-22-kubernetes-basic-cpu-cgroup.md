@@ -6,6 +6,9 @@ description: cgroup中的cpu有哪几种限制方式。k8s是如何使用实现r
 keywords:
 ---
 
+> 总结版: k8s limit中是设置的真实限定大小，request是给调度器选node使用的，上产环境用cpuset能更灵活的调度，很少用cpuset，cgroup默认使用完全公平调度，通过cfs_quota_us，cfs_period_us来控制执行，cfs_quota_us / cfs_period_us 是最大使用cpu核数
+
+
 # docker 中cpu的管理
 
 默认，容器会使用物理机的cpu是不受限制的，我们可以通过参数设置cpu的使用，大多数我们使用的是完全公平调度
@@ -22,7 +25,7 @@ keywords:
 ```
 [root@node-156 ~]# cat /sys/fs/cgroup/cpuset/docker/12/cpuset.cpus
 0-31
-```
+```v
 cpuset 是指定某个CPU编号，绑定到容器中使用
 
 ## cpushare
