@@ -25,7 +25,7 @@ keywords:
 ```
 [root@node-156 ~]# cat /sys/fs/cgroup/cpuset/docker/12/cpuset.cpus
 0-31
-```v
+```
 cpuset 是指定某个CPU编号，绑定到容器中使用
 
 ## cpushare
