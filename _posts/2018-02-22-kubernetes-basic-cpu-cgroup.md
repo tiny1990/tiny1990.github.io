@@ -32,19 +32,36 @@ cpuset 是指定某个CPU编号，绑定到容器中使用
 ```
 cpushare 用一个整数来设定 cgroup 中任务 CPU 可用时间的相对比例。例如： cpu.shares 设定为 100 的任务，即便在两个 cgroup 中，也将获得相同的 CPU 时间；但是 cpu.shares 设定为 200 的任务与 cpu.shares 设定为 100 的任务相比，前者可使用的 CPU 时间是后者的两倍，即便它们在同一个 cgroup 中。cpu.shares 文件设定的值必须大于等于 2
 
-### cpu.cfs_period_us && cpu.cfs_quota_us
-
--  cpu.cfs_period_us
+###  cpu.cfs_period_us
   此参数可以设定重新分配 cgroup 可用 CPU 资源的时间间隔，单位为微秒（µs，这里以 “us” 表示）。如果一个 cgroup 中的任务在每 1 秒钟内有 0.2 秒的时间可存取一个单独的 CPU，则请将 cpu.rt_runtime_us 设定为 2000000，并将 cpu.rt_period_us 设定为 1000000。cpu.cfs_quota_us 参数的上限为 1 秒，下限为 1000 微秒。
 
 
--  cpu.cfs_quota_us
+### cpu.cfs_quota_us
 
   此参数可以设定在某一阶段（由 cpu.cfs_period_us 规定）某个 cgroup 中所有任务可运行的时间总量，单位为微秒（µs，这里以 "us" 代表）。
-
-> 如将 cpu.cfs_quota_us 的值设定为 -1，这表示 cgroup 不需要遵循任何 CPU 时间限制。这也是每个 cgroup 的默认值（root cgroup 除外）。
+  如将 cpu.cfs_quota_us 的值设定为 -1，这表示 cgroup 不需要遵循任何 CPU 时间限制。这也是每个 cgroup 的默认值（root cgroup 除外）。
 
 > cpu.cfs_quota_us / cpu.cfs_period_us 为最多使用cpu个数
+
+参考 https://access.redhat.com/documentation/zh-cn/red_hat_enterprise_linux/7/html/resource_management_guide/sec-cpu#sect-cfs
+
+
+
+# kubernetes中的CPU使用
+
+kubernetes对容器可以设置两个值：
+```
+spec.containers[].resources.limits.cpu
+spec.containers[].resources.requests.cpu
+```
+**limits**  主要用以声明使用的最大的CPU核数。通过设置cfs_quota_us和cfs_period_us。比如limits.cpu=3，则cfs_quota_us=300000。
+
+>  cfs_period_us值一般都使用默认的100000
+
+**request**  
+声明最小的CPU核数。一方面则体现在设置cpushare上。比如request.cpu=3，则cpushare=1024*3=3072。
+当创建一个Pod时，Kubernetes调度程序将为Pod选择一个节点。每个节点具有每种资源类型的最大容量：可为Pods提供的CPU和内存量。调度程序确保对于每种资源类型，调度的容器的资源请求的总和小于节点的容量。尽管节点上的实际内存或CPU资源使用量非常低，但如果容量检查失败，则调度程序仍然拒绝在节点上放置Pod。
+而计算节点CPU的已经分配的量就是通过计算所有容器的request的和得到的。
 
 
 
