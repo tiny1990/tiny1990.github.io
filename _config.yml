@@ -44,7 +44,7 @@ subscribe_rss: /feed.xml
 markdown: kramdown
 kramdown:
     input: GFM
-highlighter: pygments
+highlighter: rouge
 paginate: 10
 lsi: false
 quiet: false
@@ -52,7 +52,7 @@ excerpt_separator: "\n\n"
 permalink: /:year/:month/:day/:title/
 gems:
     - jekyll-github-metadata
-    - pygments
+    - rouge
     - jekyll-paginate
     - jekyll-sitemap
     - jekyll-feed
