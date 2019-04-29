@@ -44,7 +44,7 @@ subscribe_rss: /feed.xml
 markdown: kramdown
 kramdown:
     input: GFM
-highlighter: rouge
+highlighter: pygments
 paginate: 10
 lsi: false
 quiet: false
