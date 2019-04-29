@@ -52,7 +52,7 @@ excerpt_separator: "\n\n"
 permalink: /:year/:month/:day/:title/
 gems:
     - jekyll-github-metadata
-    - rouge
+    - pygments
     - jekyll-paginate
     - jekyll-sitemap
     - jekyll-feed
