@@ -52,6 +52,7 @@ qg1# write
 ```
 ## 配置对等的IP地址
 > 因为是直接挂在了路由器上，此步骤可以忽略 2台机器都配置
+
 ```
 # vtysh
 qg1# show interface
@@ -85,6 +86,7 @@ qg1# write
 
 ## 配置BGP对等
 > 两台机器都配置
+
 复制sample配置,并启动
 ```
 # cp /usr/share/doc/quagga-?/bgpd.conf.sample /etc/quagga/bgpd.conf 
