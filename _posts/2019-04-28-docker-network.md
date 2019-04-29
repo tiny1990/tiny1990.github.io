@@ -12,7 +12,7 @@ keywords: quagga,bgp
 <object data="/images/quagga-docker.svg" type="image/svg+xml"></object>
 
 
-两台安装docker的centos(虚拟机)、docker0网段已经修改 /etc/docker/daemon.json ``` {"bip":"172.2.0.1/24"} ```
+两台安装docker的centos(虚拟机)、docker0网段已经修改 /etc/docker/daemon.json ``` {"bip":"172.2.0.1/24"} ```  
 目前云主机不能模拟出来，后面会研究下，应该是系统做了限制
 
 ##  安装quagga
