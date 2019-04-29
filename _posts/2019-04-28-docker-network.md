@@ -19,20 +19,10 @@ keywords: quagga,bgp
 
 首先安装quagga
 
-
-def show
-  @widget = Widget(params[:id])
-  respond_to do |format|
-    format.html # show.html.erb
-    format.json { render json: @widget }
-  end
-end
-{% endhighlight %}
-
-
 {% highlight shell %}
 # yum install quagga
 {% endhighlight %}
+
 centos7 需要关闭SELinux或者允许Zebra守护进程写入它的配置目录
 ```
 # setsebool -P zebra_write_config 1 
