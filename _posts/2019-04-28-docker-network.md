@@ -7,7 +7,7 @@ keywords: quagga,bgp
 ---
 
 
-## 整体架构图
+## 整体拓扑图
 
 <object data="/images/quagga-docker.svg" type="image/svg+xml"></object>
 
@@ -19,7 +19,7 @@ keywords: quagga,bgp
 
 首先安装quagga
 
-```shell
+```
 # yum install quagga
 ```
 
@@ -34,7 +34,7 @@ centos7 需要关闭SELinux或者允许Zebra守护进程写入它的配置目录
 ## 配置日志路径
 
 复制zebra.conf
-```shell
+```
 # cp /usr/share/doc/quagga-?/zebra.conf.sample /etc/quagga/zebra.conf 
 ```
 启动zebra
@@ -102,7 +102,7 @@ qg1# write
 router bgp 7675
 ```
 
-配置架构图的参数
+配置拓扑图的参数
 ```
 qg1# configure terminal
 qg1# no router bgp 7675
