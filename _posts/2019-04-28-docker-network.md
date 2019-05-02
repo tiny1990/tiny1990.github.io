@@ -19,9 +19,9 @@ keywords: quagga,bgp
 
 首先安装quagga
 
-{% highlight shell %}
+```shell
 # yum install quagga
-{% endhighlight %}
+```
 
 centos7 需要关闭SELinux或者允许Zebra守护进程写入它的配置目录
 ```
@@ -34,7 +34,7 @@ centos7 需要关闭SELinux或者允许Zebra守护进程写入它的配置目录
 ## 配置日志路径
 
 复制zebra.conf
-```
+```shell
 # cp /usr/share/doc/quagga-?/zebra.conf.sample /etc/quagga/zebra.conf 
 ```
 启动zebra
