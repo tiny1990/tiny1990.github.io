@@ -14,4 +14,5 @@ keywords: quagga,bgp
 整体拓扑图和解决方案如下:
 
 <object data="/images/bdp.svg" type="image/svg+xml"></object>  
-第三层是node节点，在每个node节点运行bdpd，每个容器的ip会通过bdpd汇报给tar swatich，从而打到整个集群容器互通的目的
+第三层是node节点，在每个node节点运行bdpd  
+每个容器的ip会通过bdpd汇报给tor swatich，从而打到整个集群容器互通的目的
