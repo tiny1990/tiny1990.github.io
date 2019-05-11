@@ -33,7 +33,6 @@ CC=/root/openwrt/hc5761/staging_dir/toolchain-mipsel_r2_gcc-4.6-linaro_uClibc-0.
 --enable-bgpd   \
 --enable-user=root  \
 --enable-group=root
-
 ```
 
 ## 问题记录
@@ -46,11 +45,11 @@ configure: error: vtysh needs libreadline but was not found and usable on your s
 找不到依赖，查看```toolchain-mipsel_r2_gcc-4.6-linaro_uClibc-0.9.33.2```存在readline的lib  
 有时间需要确认下，不过没啥太大关系，使用telnet一样配置quagga
 
-- openwrt报错提示找不到libzebra.so
- 设置--libdir=/opt/lib 然后把编译出来的so文件复制到/opt/lib即可
+- openwrt报错提示找不到libzebra.so  
+  设置--libdir=/opt/lib 然后把编译出来的so文件复制到/opt/lib即可
 
-- 缺少依赖的排查
+- 缺少依赖的排查  
   使用ldd命令，可以查看可执行文件的so依赖，以及缺少的会```=> not found```
 
-- 运行bgpd没任何提示信息
+- 运行bgpd没任何提示信息  
   第一次编译的时候没有指定```enable-user```导致在root下启不来，路由器并没有报错
