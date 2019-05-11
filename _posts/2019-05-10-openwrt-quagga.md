@@ -33,6 +33,8 @@ CC=/root/openwrt/hc5761/staging_dir/toolchain-mipsel_r2_gcc-4.6-linaro_uClibc-0.
 --enable-bgpd   \
 --enable-user=root  \
 --enable-group=root
+
+make
 ```
 
 ## 问题记录
