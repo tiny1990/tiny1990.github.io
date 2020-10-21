@@ -1,3 +1,11 @@
+---
+layout: post
+title: kubernetes 跨版本升级
+categories: 技术
+description: 集群主要版本是<=1.12 落后于社区版本太多(升级时，最新1.17已经release)，kubernetes社区更新迭代速度较快，跟进社区高版本，可以保证集群更可靠稳定,跟上社区的发展利大于弊。
+keywords: kubernetes
+---
+
 > 本文概述 跨版本升级涉及kubelet 的修改，也是升级流程中一个重要环节。
 > 阅读本文需要:
 > - 了解kubernetes，以及各个组件的功能
