@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: http://binpan.me
+url: https://binpan.me
 date_format: "ordinal"
 title: 小潘
 subtitle: "技术改变生活"
