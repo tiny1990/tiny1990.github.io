@@ -8,7 +8,7 @@
 **************************************
 
 [rewrite_local]
-^https?:\/\/.*binpan.me url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/mojitianqi.js https://gist.githubusercontent.com/tiny1990/d59e1e1d436700a1ca408b765055405c/raw/cb039d065dfe78cd505bc371406313a1b2986325/gistfile1.txt
+^https?:\/\/.*binpan.me url script-response-body https://raw.githubusercontent.com/tiny1990/tiny1990.github.io/refs/heads/master/catch.js
 
 [mitm]
 hostname = *binpan.me
