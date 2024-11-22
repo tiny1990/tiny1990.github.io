@@ -3,7 +3,7 @@
 **************************************
 
 [rewrite_local]
-^http://17\.188.*(:\d+)?/path/to/resource(.*) url script-response-body https://raw.githubusercontent.com/tiny1990/tiny1990.github.io/refs/heads/master/catchme.js
+^http://17\.188.*(:\d+)? url script-response-body https://raw.githubusercontent.com/tiny1990/tiny1990.github.io/refs/heads/master/catchme.js
 
 
 [mitm]
