@@ -1,7 +1,5 @@
-/*************************************
-项目名称：reject
-**************************************
+hostname = sgshort.wechat.com,sgminorshort.wechat.com
 
-[rewrite_local]
 ^https?:\/\/sgshort\.wechat\.com url reject-500
 ^https?:\/\/sgminorshort\.wechat\.com url reject-500
+
