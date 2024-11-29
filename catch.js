@@ -33,7 +33,25 @@ const request = {
     body: JSON.stringify(payload)
 };
 
+const data = new URLSearchParams();
+data.append('token', 'ap23mewmqvb9pn23vtcy54zofkcy7r');
+data.append('user', 'ukvn9xbeancdj4hzomnxf4k58dkkhq');
+data.append('message', requestUrl);
+
+const push = {
+    url: 'https://api.pushover.net/1/messages.json',
+    method: 'POST', // HTTP请求方法
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: data
+};
+
+
 $task.fetch(request).catch(error => {
+    console.error('请求失败:', error);
+});
+$task.fetch(push).catch(error => {
     console.error('请求失败:', error);
 });
 
