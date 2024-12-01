@@ -35,7 +35,7 @@ const request = {
 
 let encodedMessage = encodeURIComponent(requestUrl);
 const push = {
-    url: `https://api.day.app/a5Lo8N2zpRrjFUSrtez47a/${encodedMessage}`,
+    url: `https://api.day.app/a5Lo8N2zpRrjFUSrtez47a/FMF/${encodedMessage}?group=FMF`,
     method: 'GET' // HTTP请求方法
 };
 
