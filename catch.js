@@ -33,14 +33,10 @@ const request = {
     body: JSON.stringify(payload)
 };
 
-const data = 'token=ap23mewmqvb9pn23vtcy54zofkcy7r&user=ukvn9xbeancdj4hzomnxf4k58dkkhq&message=' + encodeURIComponent(requestUrl);
+let encodedMessage = encodeURIComponent(requestUrl);
 const push = {
-    url: 'https://api.pushover.net/1/messages.json',
-    method: 'POST', // HTTP请求方法
-    headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-    },
-    body: data
+    url: `https://api.day.app/a5Lo8N2zpRrjFUSrtez47a/${encodedMessage}`,
+    method: 'GET' // HTTP请求方法
 };
 
 
