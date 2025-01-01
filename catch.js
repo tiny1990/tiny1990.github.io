@@ -3,10 +3,9 @@
 **************************************
 
 [rewrite_local]
-^https?:\/\/metrics\.icloud\.com/ url script-response-body https://raw.githubusercontent.com/tiny1990/tiny1990.github.io/refs/heads/master/catch.js
-
+^https?:\/\/.*fmfmobile\.icloud\.com(\.cn)?\/ url script-response-body https://raw.githubusercontent.com/tiny1990/tiny1990.github.io/refs/heads/master/catch.js
 [mitm]
-hostname = metrics.icloud.com
+hostname = *fmfmobile.icloud.com,*fmfmobile.icloud.com.cn
 
 *************************************/
 let requestBody = $request.body || '';
