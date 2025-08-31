@@ -10,7 +10,6 @@ hostname = sealsuite.bytedance.com
 *************************************/
 let requestBody = $request.body || '';
 let responseBody = $response.body || '';
-let requestCookie = $request.cookie;
 
 console.error('请求失败:');
 console.log($request.headers);
