@@ -3,9 +3,9 @@
 **************************************
 
 [rewrite_local]
-^https?:\/\/.*fmfmobile\.icloud\.com(\.cn)?\/ url script-response-body https://raw.githubusercontent.com/tiny1990/tiny1990.github.io/refs/heads/master/catch.js
+^https?:\/\/.sealsuite.bytedance.com\/api\/v1\/wifi/guest\/apply url script-response-body https://raw.githubusercontent.com/tiny1990/tiny1990.github.io/refs/heads/master/catch_cookie.js
 [mitm]
-hostname = *fmfmobile.icloud.com,*fmfmobile.icloud.com.cn
+hostname = sealsuite.bytedance.com
 
 *************************************/
 let requestBody = $request.body || '';
