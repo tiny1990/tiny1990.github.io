@@ -14,7 +14,7 @@ let responseBody = $response.body || '';
 let requestHeaders = $request.headers;
 
 
-console.log('请求头信息:', JSON.stringify($request, null, 2));
+console.log('请求头信息:', JSON.stringify(request, null, 2));
 console.log('Cookie:', requestHeaders['Cookie']);
 
 
