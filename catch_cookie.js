@@ -1,5 +1,5 @@
 /*************************************
-项目名称：catch fmf
+项目名称：catch cookie
 **************************************
 
 [rewrite_local]
@@ -8,11 +8,6 @@
 hostname = sealsuite.bytedance.com
 
 *************************************/
-let requestBody = $request.body || '';
-let responseBody = $response.body || '';
-
-console.error('请求失败:');
-console.log($request.headers);
-
+console.log("FM数据捕获成功：" + timestamp);
 
 $done({});
