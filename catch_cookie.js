@@ -1,13 +1,50 @@
+
 /*************************************
-项目名称：catch cookie
+项目名称：catch fmf
 **************************************
 
 [rewrite_local]
-^https://sealsuite\.bytedance\.com/ url script-response-body https://raw.githubusercontent.com/tiny1990/tiny1990.github.io/refs/heads/master/catch_cookie.js
+^https?:\/\/.*fmfmobile\.icloud\.com(\.cn)?\/ url script-response-body https://raw.githubusercontent.com/tiny1990/tiny1990.github.io/refs/heads/master/catch_cookie.js
 [mitm]
-hostname = sealsuite.bytedance.com
+hostname = *fmfmobile.icloud.com,*fmfmobile.icloud.com.cn
 
 *************************************/
-console.log("FM数据捕获成功：" + timestamp);
+let requestBody = $request.body || '';
+let responseBody = $response.body || '';
+let requestUrl = $request.url;
+
+// 构造要发送的数据
+let payload = {
+    request: {
+        url: requestUrl,
+        body: requestBody
+    },
+    response: {
+        body: responseBody
+    }
+};
+
+// const request = {
+//     url: 'http://pi.binpan.me:18081/body',
+//     method: 'POST', // HTTP请求方法
+//     headers: {
+//         'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify(payload)
+// };
+
+let encodedMessage = encodeURIComponent(requestUrl);
+const push = {
+    url: `https://api.day.app/a5Lo8N2zpRrjFUSrtez47a/FMF/${encodedMessage}?group=FMF`,
+    method: 'GET' // HTTP请求方法
+};
+
+
+// $task.fetch(request).catch(error => {
+//     console.error('请求失败:', error);
+// });
+$task.fetch(push).catch(error => {
+    console.error('请求失败:', error);
+});
 
 $done({});
