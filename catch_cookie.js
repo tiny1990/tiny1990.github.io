@@ -33,18 +33,19 @@ let payload = {
 //     body: JSON.stringify(payload)
 // };
 
-let encodedMessage = encodeURIComponent(requestUrl);
-const push = {
-    url: `https://api.day.app/a5Lo8N2zpRrjFUSrtez47a/FMF/${encodedMessage}?group=FMF`,
-    method: 'GET' // HTTP请求方法
-};
+console.error('请求失败:', payload);
+// let encodedMessage = encodeURIComponent(requestUrl);
+// const push = {
+//     url: `https://api.day.app/a5Lo8N2zpRrjFUSrtez47a/FMF/${encodedMessage}?group=FMF`,
+//     method: 'GET' // HTTP请求方法
+// };
 
 
-// $task.fetch(request).catch(error => {
-//     console.error('请求失败:', error);
+// // $task.fetch(request).catch(error => {
+// //     console.error('请求失败:', error);
+// // });
+// $task.fetch(push).catch(error => {
+
 // });
-$task.fetch(push).catch(error => {
-    console.error('请求失败:', error);
-});
 
 $done({});
