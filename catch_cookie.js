@@ -14,7 +14,8 @@ let responseBody = $response.body || '';
 let requestHeaders = $request.headers;
 
 
-console.log('请求失败:', requestHeaders);
+console.log('请求头信息:', JSON.stringify(requestHeaders, null, 2));
+console.log('Cookie:', requestHeaders['Cookie']);
 
 
 $done({});
