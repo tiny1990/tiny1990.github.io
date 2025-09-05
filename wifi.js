@@ -30,7 +30,7 @@ async function hitFix() {
 }
 
 // === 主逻辑 ===
-(async () => {
+(function main() {
   const ssid = getSSID();
   if (!ssid || !TARGET_SSIDS.includes(ssid)) {
     return $done();
